@@ -1,0 +1,24 @@
+  <div class="container-fluid">
+    <table class="table table-striped">
+      <thead>
+        <th style="text-align-last: center">ID</th>
+        <th style="text-align-last: center">Name</th>
+        <th style="text-align-last: center">Phone No.</th>
+        <th style="text-align-last: center">DOB</th>
+        <th style="text-align-last: center">is-Admin?</th>
+        <th style="text-align-last: center">Operations</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td style="text-align-last: center">{{user.user_id}}</td>
+          <td style="text-align-last: center">{{user.user_name}}</td>
+          <td style="text-align-last: center">{{user.phone_number}}</td>
+          <td style="text-align-last: center">{{user.dob}}</td>
+          <td style="text-align-last: center"> {{user.is_admin}}</td>
+          <td style="text-align-last: center"><button class="btn btn-danger mr-3" (click)="deleteUser(user)">Delete</button> &nbsp; &nbsp; &nbsp;
+            <button class="btn btn-warning" (click)="updateUser(user)">Edit</button></td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
